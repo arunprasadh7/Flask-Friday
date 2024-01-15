@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jinha |Job page</title>
+  </head>
+  <body>
+    <h1>Hello {{user_name|capitalize}}!!!! <br />Welcome to Job Portal</h1>
+    <h2>
+      You have been selected for the role of {{course|upper}} full stack .
+    </h2>
+
+    <h3>List of fruits</h3>
+    {% for fruit in fruits%} {{fruit}} <br />
+    {% endfor %}
+    <br />
+    <h3>Accessing individual items of fruit list</h3>
+    {{fruits.0}} <br />
+    {{fruits.3}} <br />
+    <br /><br />
+  </body>
+</html>

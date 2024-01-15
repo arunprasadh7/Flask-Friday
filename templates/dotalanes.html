@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flask 2 |Jinja | Dota lanes</title>
+  </head>
+  <body>
+    <h1>Welcome to Dota auto lane assigner!!</h1>
+    <h2>Here are the list of the roles</h2>
+    {% for role in roles %} {{role}} <br />
+    {% endfor%}
+    <br />
+    <h2>Your lane is</h2>
+    {% if position == 1 %}
+    <p>
+      You're {{roles.0}} <br />
+      Go top and farm
+    </p>
+    {%elif position == 2 %}
+    <p>
+      You're {{roles.1}} <br />
+      Go mid ,control runes and rotate
+    </p>
+    {%elif position == 3%}
+    <p>
+      You're {{roles.2}} <br />
+      Go offlane and seek XP
+    </p>
+    {%elif position == 4%}
+    <p>
+      You're {{roles.3}} <br />
+      Go with offlane and rotate
+    </p>
+    {%else%}
+    <p>
+      You're {{roles.4}} <br />
+      Go with carry and help farm
+    </p>
+    {% endif%}
+  </body>
+</html>
